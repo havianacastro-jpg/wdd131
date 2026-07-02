@@ -1,23 +1,37 @@
-#course-title {
-    display: block;
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+main {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
     text-align: center;
 }
 
 nav {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 800px;
-    margin: 0 auto;
+a {
+    color: white;
+    text-decoration: none;
 }
 
-.card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
+a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
 }
