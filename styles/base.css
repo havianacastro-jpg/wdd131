@@ -26,6 +26,21 @@ main {
     object-fit: cover;
     border-radius: 50%; 
     border: 3px solid #333;
+    flex-shrink: 0; 
+}
+
+
+.card img {
+    max-width: 400px; 
+    width: 100%;      
+    height: auto;     
+    display: block;
+    margin: 0 auto;   
+}
+
+.profile-card img {
+    max-width: 150px; 
+    margin: 0;
 }
 
 footer {
@@ -49,8 +64,4 @@ a {
 a:hover {
     color: orange;
     text-decoration: underline;
-}
-
-img {
-    max-width: 100%;
 }
