@@ -1,0 +1,22 @@
+@media screen and (min-width: 800px) {
+    
+    nav {
+        display: block;
+    }
+
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        background-color: transparent;
+    }
+
+    nav ul li a {
+        padding: 0 1.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
