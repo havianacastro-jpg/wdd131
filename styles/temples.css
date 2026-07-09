@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Cambiado a Roboto como pide la auditoría */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
 }
 
@@ -23,7 +23,7 @@ header {
     color: white;
     text-decoration: none;
     cursor: pointer;
-    display: block; 
+    display: block;
 }
 
 nav {
