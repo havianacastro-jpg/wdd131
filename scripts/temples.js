@@ -1,34 +1,32 @@
-document.querySelector('#year').textContent = new Date().getFullYear();
-document.querySelector('#lastModified').textContent = document.lastModified;
-
 const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('nav');
+const navigation = document.querySelector('.navigation');
 
 hamButton.addEventListener('click', () => {
     navigation.classList.toggle('open');
     hamButton.classList.toggle('open');
 });
-// Seleccionamos los botones y la galería
-const filterButtons = document.querySelectorAll("nav ul li a");
-const gallery = document.querySelector(".gallery");
+
 const temples = document.querySelectorAll(".temple-card");
 
-filterButtons.forEach(button => {
-    button.addEventListener("click", (e) => {
-        e.preventDefault(); // Evita que la página salte al hacer clic
-        const filter = e.target.textContent.toLowerCase();
+function filterTemples(criteria) {
+    temples.forEach(temple => {
+        const year = parseInt(temple.getAttribute("data-year"));
+        const size = temple.getAttribute("data-size");
         
-        temples.forEach(temple => {
-            const year = parseInt(temple.getAttribute("data-year"));
-            const size = temple.getAttribute("data-size");
-
-            // Lógica de filtrado
-            if (filter === "old" && year < 1990) temple.style.display = "block";
-            else if (filter === "new" && year > 2000) temple.style.display = "block";
-            else if (filter === "large" && size === "large") temple.style.display = "block";
-            else if (filter === "small" && size === "small") temple.style.display = "block";
-            else if (filter === "home") temple.style.display = "block"; // Muestra todos
-            else temple.style.display = "none";
-        });
+        if (criteria === "old" && year < 1990) temple.style.display = "block";
+        else if (criteria === "new" && year > 2000) temple.style.display = "block";
+        else if (criteria === "large" && size === "large") temple.style.display = "block";
+        else if (criteria === "small" && size === "small") temple.style.display = "block";
+        else if (criteria === "home") temple.style.display = "block";
+        else temple.style.display = "none";
     });
-});
+}
+
+document.querySelector("#old").addEventListener("click", () => filterTemples("old"));
+document.querySelector("#new").addEventListener("click", () => filterTemples("new"));
+document.querySelector("#large").addEventListener("click", () => filterTemples("large"));
+document.querySelector("#small").addEventListener("click", () => filterTemples("small"));
+document.querySelector("a[href='index.html']").addEventListener("click", () => filterTemples("home"));
+
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
