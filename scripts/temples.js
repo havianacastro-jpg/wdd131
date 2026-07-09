@@ -13,12 +13,19 @@ function filterTemples(criteria) {
         const year = parseInt(temple.getAttribute("data-year"));
         const size = temple.getAttribute("data-size");
         
-        if (criteria === "old" && year < 1990) temple.style.display = "block";
-        else if (criteria === "new" && year > 2000) temple.style.display = "block";
-        else if (criteria === "large" && size === "large") temple.style.display = "block";
-        else if (criteria === "small" && size === "small") temple.style.display = "block";
-        else if (criteria === "home") temple.style.display = "block";
-        else temple.style.display = "none";
+        if (criteria === "old" && year < 1990) {
+            temple.style.display = "block";
+        } else if (criteria === "new" && year > 2000) {
+            temple.style.display = "block";
+        } else if (criteria === "large" && size === "large") {
+            temple.style.display = "block";
+        } else if (criteria === "small" && size === "small") {
+            temple.style.display = "block";
+        } else if (criteria === "home") {
+            temple.style.display = "block";
+        } else {
+            temple.style.display = "none";
+        }
     });
 }
 
@@ -29,4 +36,4 @@ document.querySelector("#small").addEventListener("click", () => filterTemples("
 document.querySelector("a[href='index.html']").addEventListener("click", () => filterTemples("home"));
 
 document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+document.getElementById("lastModified").textContent = document.lastModified;
