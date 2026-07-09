@@ -31,11 +31,14 @@ nav {
 }
 
 nav.open {
-    display: block; 
+    display: flex; 
+    flex-direction: column;
+}
 
 nav ul {
     list-style: none;
     background-color: #444;
+    width: 100%;
 }
 
 nav ul li a {
@@ -71,4 +74,16 @@ figure {
 figure img {
     width: 100%;
     height: auto;
+}
+
+@media (min-width: 600px) {
+    nav {
+        display: block;
+    }
+    #menu {
+        display: none;
+    }
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
