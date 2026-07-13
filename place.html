@@ -11,6 +11,7 @@
     <header>
         <h1>Nombre del País</h1>
     </header>
+
     <main>
         <section class="card">
             <h2>Vista del país</h2>
@@ -20,15 +21,25 @@
             </picture>
         </section>
 
-        <section class="card">
+        <section class="card weather-card">
             <h2 class="weather-heading">Weather</h2>
-            <ul>
-                <li>Temperature: <span id="temp">5</span>°C</li>
-                <li>Wind Speed: <span id="wind">10</span> km/h</li>
-                <li>Wind Chill: <span id="wind-chill"></span></li>
-            </ul>
+            <div class="weather-grid">
+                <div class="weather-item">
+                    <span class="label">Temperature</span>
+                    <span class="value" id="temp">5°C</span>
+                </div>
+                <div class="weather-item">
+                    <span class="label">Wind Speed</span>
+                    <span class="value" id="wind">10 km/h</span>
+                </div>
+                <div class="weather-item wind-chill">
+                    <span class="label">Wind Chill</span>
+                    <span class="value" id="wind-chill">--</span>
+                </div>
+            </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; <span id="currentyear"></span> | Nombre Apellido | <span id="lastModified"></span></p>
     </footer>
