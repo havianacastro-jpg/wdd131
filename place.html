@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Country Page</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Nombre del País</h1>
+    </header>
+    <main>
+        <section class="card">
+            <h2>Vista del país</h2>
+            <picture>
+                <source media="(min-width: 800px)" srcset="images/hero-large.webp">
+                <img src="images/hero-small.webp" alt="Paisaje del país" width="400" height="300">
+            </picture>
+        </section>
+
+        <section class="card">
+            <h2 class="weather-heading">Weather</h2>
+            <ul>
+                <li>Temperature: <span id="temp">5</span>°C</li>
+                <li>Wind Speed: <span id="wind">10</span> km/h</li>
+                <li>Wind Chill: <span id="wind-chill"></span></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Nombre Apellido | <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
