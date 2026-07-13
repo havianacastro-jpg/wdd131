@@ -10,14 +10,28 @@ body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background-color: 
 
 header, footer { background-color: var(--primary-color); color: white; padding: 1.5rem; text-align: center; }
 
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 0 0 0;
+}
+
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: 8px 16px; 
+    border: 1px solid white; 
+    border-radius: 5px; 
+    transition: all 0.3s ease; 
+}
+nav a:hover { background-color: white; color: var(--primary-color); }
+
 main { display: grid; gap: 20px; padding: 20px; }
 
 .card { background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-
 .card img { width: 100%; height: auto; border-radius: 8px; margin-top: 15px; }
-
-nav a { color: white; text-decoration: none; font-weight: bold; padding: 10px 15px; border: 1px solid white; border-radius: 5px; transition: background-color 0.3s, color 0.3s; }
-nav a:hover { background-color: white; color: var(--primary-color); }
 
 .weather-card { padding: 2rem; }
 .weather-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; margin-top: 20px; }
