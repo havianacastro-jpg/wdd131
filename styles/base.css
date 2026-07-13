@@ -4,18 +4,49 @@
     --bg-color: #f4f4f9;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
-body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background-color: var(--bg-color); max-width: 900px; margin: 0 auto; }
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    line-height: 1.6; 
+    background-color: var(--bg-color); 
+    max-width: 900px; 
+    margin: 0 auto; 
+}
 
-header, footer { background-color: var(--primary-color); color: white; padding: 1.5rem; text-align: center; }
+header, footer { 
+    background-color: var(--primary-color); 
+    color: white; 
+    padding: 1.5rem; 
+    text-align: center; 
+}
 
-main { display: grid; gap: 20px; padding: 20px; }
+main { 
+    display: grid; 
+    gap: 20px; 
+    padding: 20px; 
+}
 
-.card { background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.card { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    text-align: center; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
 
-.card img { width: 100%; height: auto; border-radius: 8px; margin-top: 15px; }
+.card img { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    margin-top: 15px; 
+}
 
+@media screen and (min-width: 601px) {
     .weather-heading::after {
         content: " ⛅";
     }
