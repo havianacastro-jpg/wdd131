@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album | WDD 131</title>
+    <meta name="description" content="An interactive photo album showcasing various temples, created for the WDD 131 Dynamic Web Fundamentals course.">
+    <meta name="author" content="Hagot Viana Castro">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <a id="menu" href="#">&#9776;</a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="large">Large</a></li>
+                <li><a href="#" id="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="section-title">Home</h2>
+        <!-- Contenedor dinámico donde JavaScript inyectará las tarjetas -->
+        <div class="res-grid" id="temples-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Hagot Viana Castro | Mexico</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

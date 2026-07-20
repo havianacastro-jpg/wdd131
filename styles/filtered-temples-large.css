@@ -1,14 +1,16 @@
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
     
     nav {
-        display: block;
+        display: block !important;
     }
 
+    #menu {
         display: none;
     }
 
     nav ul {
         display: flex;
+        flex-direction: row;
         background-color: transparent;
     }
 
@@ -16,7 +18,7 @@
         padding: 0 1.5rem;
     }
 
-    .gallery {
+    .gallery, .res-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
