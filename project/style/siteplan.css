@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #4A3B32;    
-  --secondary-color: #D4A373;  
-  --accent-color: #FAEDCD;     
-  --text-color: #281C14;       
-  --bg-color: #FEFAE0;         
+  --primary-color: #4A3B32;    /* Marrón café oscuro para encabezados */
+  --secondary-color: #D4A373;  /* Tono café claro/acento para fondos y detalles */
+  --accent-color: #FAEDCD;     /* Fondo suave para tarjetas o secciones */
+  --text-color: #281C14;       /* Color principal del texto */
+  --bg-color: #FEFAE0;         /* Color de fondo general del sitio */
   
   --heading-font: 'Merriweather', serif;
   --body-font: 'Roboto', sans-serif;
@@ -70,6 +70,16 @@ ul {
 .primary-bg { background-color: var(--primary-color); }
 .secondary-bg { background-color: var(--secondary-color); color: var(--text-color); }
 .accent-bg { background-color: var(--accent-color); color: var(--text-color); }
+
+/* Clase agregada para reemplazar los estilos en línea de los wireframes */
+.wireframe-box {
+  border: 2px dashed #ccc;
+  padding: 1rem;
+  text-align: center;
+  background: #fafafa;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
 
 footer {
   text-align: center;
