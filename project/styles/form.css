@@ -1,0 +1,159 @@
+:root {
+  --primary-color: #4A3B32;
+  --secondary-color: #D4A373;
+  --accent-color: #FAEDCD;
+  --text-color: #281C14;
+  --bg-color: #FEFAE0;
+  --heading-font: 'Merriweather', serif;
+  --body-font: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: var(--heading-font);
+  margin: 0;
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+fieldset {
+  background: #ffffff;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+.field {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.required {
+  color: #b30000;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(74, 59, 50, 0.3);
+}
+
+.rating-stars {
+  display: flex;
+  gap: 15px;
+  font-size: 1.4rem;
+}
+
+.rating-stars label {
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.form-submit {
+  text-align: center;
+}
+
+input[type="submit"], .cta-button {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+input[type="submit"]:hover, .cta-button:hover {
+  background-color: #362a24;
+}
+
+.confirmation-container {
+  text-align: center;
+}
+
+.card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.counter-display {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  margin-top: 3rem;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product Review Form for Bean & Brew / WDD 131 Assignment">
+    <meta name="author" content="Hagot Coriantumr Viana Castro">
+    <title>Product Review - WDD 131</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/form.css">
+    <!-- Custom JS -->
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html" class="review-form">
+            
+            <!-- Product Name -->
+            <fieldset>
+                <legend>Product Information</legend>
+                
+                <div class="field">
+                    <label for="productSelect">Product Name <span class="required">*</span></label>
+                    <select id="productSelect" name="productName" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                    </select>
+                </div>
+
+                <!-- Overall Rating -->
+                <div class="field">
+                    <label>Overall Rating <span class="required">*</span></label>
+                    <div class="rating-stars">
+                        <label title="1 star"><input type="radio" name="rating" value="1" required> ☆</label>
+                        <label title="2 stars"><input type="radio" name="rating" value="2" required> ☆</label>
+                        <label title="3 stars"><input type="radio" name="rating" value="3" required> ☆</label>
+                        <label title="4 stars"><input type="radio" name="rating" value="4" required> ☆</label>
+                        <label title="5 stars"><input type="radio" name="rating" value="5" required> ☆</label>
+                    </div>
+                </div>
+
+                <!-- Date of Installation -->
+                <div class="field">
+                    <label for="installDate">Date of Installation <span class="required">*</span></label>
+                    <input type="date" id="installDate" name="installDate" required>
+                </div>
+            </fieldset>
+
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Product Feedback</legend>
+                
+                <div class="field">
+                    <label>Which features did you find useful? (Check all that apply)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="feature" value="durability"> Durability</label>
+                        <label><input type="checkbox" name="feature" value="ease"> Ease of Use</label>
+                        <label><input type="checkbox" name="feature" value="performance"> Performance</label>
+                        <label><input type="checkbox" name="feature" value="design"> Design</label>
+                    </div>
+                </div>
+
+                <!-- Written Review -->
+                <div class="field">
+                    <label for="writtenReview">Written Review (Optional)</label>
+                    <textarea id="writtenReview" name="writtenReview" rows="4" placeholder="Write your review here..."></textarea>
+                </div>
+
+                <!-- User Name -->
+                <div class="field">
+                    <label for="userName">Your Name (Optional)</label>
+                    <input type="text" id="userName" name="userName" placeholder="Full Name">
+                </div>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <div class="form-submit">
+                <input type="submit" value="Post Review">
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Hagot Coriantumr Viana Castro - WDD 131 Product Review</p>
+    </footer>
+</body>
+</html>
