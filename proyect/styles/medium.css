@@ -1,0 +1,43 @@
+/* medium.css - Applied for min-width: 768px (Tablets and Desktops) */
+
+@media (min-width: 768px) {
+    /* Header and Navigation */
+    #menu-button {
+        display: none; /* Hide hamburger menu on larger screens */
+    }
+
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        width: auto;
+        padding: 0;
+    }
+
+    /* Main Grid Layout for Coffee Shops */
+    .cafes-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    /* Hero Section Enhancements */
+    .hero {
+        position: relative;
+        text-align: center;
+    }
+
+    .hero-text {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(59, 47, 47, 0.85);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        width: 80%;
+    }
+}
