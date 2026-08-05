@@ -108,7 +108,6 @@ main {
     background-color: var(--accent-color);
 }
 
-/* Map Styling for map.html */
 #map {
     height: 450px;
     width: 100%;
@@ -130,7 +129,6 @@ footer a {
     color: var(--secondary-color);
 }
 
-/* Mobile Responsive Media Query */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;

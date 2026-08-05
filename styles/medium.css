@@ -1,9 +1,6 @@
-/* medium.css - Applied for min-width: 768px (Tablets and Desktops) */
-
 @media (min-width: 768px) {
-    /* Header and Navigation */
     #menu-button {
-        display: none; /* Hide hamburger menu on larger screens */
+        display: none; 
     }
 
     nav ul {
@@ -16,14 +13,12 @@
         padding: 0;
     }
 
-    /* Main Grid Layout for Coffee Shops */
     .cafes-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
 
-    /* Hero Section Enhancements */
     .hero {
         position: relative;
         text-align: center;

@@ -1,4 +1,3 @@
-// Footer dates
 const currentYearSpan = document.querySelector("#currentyear");
 if (currentYearSpan) {
     currentYearSpan.textContent = new Date().getFullYear();
@@ -9,7 +8,6 @@ if (lastModifiedParagraph) {
     lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
 }
 
-// Hamburger menu toggle
 const menuButton = document.querySelector("#menu-button");
 const navList = document.querySelector("#nav-list");
 
@@ -19,9 +17,6 @@ if (menuButton && navList) {
     });
 }
 
-// ===================================================
-// 1. COFFEE SHOPS DATA & DISPLAY
-// ===================================================
 const cafes = [
     {
         name: "Bruma Coffee",
@@ -52,7 +47,6 @@ const cafes = [
     }
 ];
 
-// Function to display coffee shops using template literals exclusively
 const displayCafes = (cafesList) => {
     const container = document.querySelector("#cafes-container");
     if (!container) return;
@@ -73,10 +67,8 @@ const displayCafes = (cafesList) => {
     });
 };
 
-// Initial display call for coffee.html
 displayCafes(cafes);
 
-// Filter buttons event listeners with conditional branching
 const filterTopButton = document.querySelector("#filter-top");
 const filterAllButton = document.querySelector("#filter-all");
 
@@ -93,9 +85,6 @@ if (filterAllButton) {
     });
 }
 
-// ===================================================
-// 2. MENU DATA & DISPLAY (USD PRICES)
-// ===================================================
 const menuItems = [
     { name: "Double Espresso", category: "hot", priceUSD: 3.25, description: "Rich and bold double shot of local roast espresso." },
     { name: "Pour-Over (V60)", category: "hot", priceUSD: 4.50, description: "Filtered specialty coffee highlighting fruity notes." },
@@ -127,7 +116,6 @@ const displayMenu = (items) => {
 
 displayMenu(menuItems);
 
-// Menu Filter Listeners
 const filterAllMenu = document.querySelector("#filter-all-menu");
 const filterHot = document.querySelector("#filter-hot");
 const filterCold = document.querySelector("#filter-cold");
@@ -138,9 +126,6 @@ if (filterHot) filterHot.addEventListener("click", () => displayMenu(menuItems.f
 if (filterCold) filterCold.addEventListener("click", () => displayMenu(menuItems.filter(i => i.category === "cold")));
 if (filterBakery) filterBakery.addEventListener("click", () => displayMenu(menuItems.filter(i => i.category === "bakery")));
 
-// ===================================================
-// 3. INTERACTIVE MAP (Leaflet.js)
-// ===================================================
 const mapContainer = document.querySelector("#map");
 if (mapContainer && typeof L !== "undefined") {
     const map = L.map('map').setView([20.1167, -98.7333], 13);
@@ -157,9 +142,6 @@ if (mapContainer && typeof L !== "undefined") {
     });
 }
 
-// ===================================================
-// 4. LOCAL STORAGE VISITOR COUNTER
-// ===================================================
 const visitMessage = document.querySelector("#visitor-message");
 if (visitMessage) {
     let visitCount = Number(window.localStorage.getItem("visitCount-ls")) || 0;
