@@ -21,6 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    position: relative;
 }
 
 nav ul {
@@ -87,21 +88,34 @@ main {
 
 .filter-buttons {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
 }
 
 .filter-buttons button {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 4px;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 .filter-buttons button:hover {
     background-color: var(--accent-color);
+}
+
+/* Map Styling for map.html */
+#map {
+    height: 450px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 1rem;
+    z-index: 1;
 }
 
 footer {
@@ -123,12 +137,13 @@ footer a {
         display: none;
         background-color: var(--primary-color);
         position: absolute;
-        top: 60px;
+        top: 100%;
         right: 0;
         width: 100%;
         text-align: center;
         padding: 1rem 0;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
     }
 
     nav ul.open {

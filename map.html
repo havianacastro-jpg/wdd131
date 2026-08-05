@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Specialty Coffee Guide - Home</title>
-    <meta name="description" content="Discover the best local specialty coffee shops and enjoy a unique cup of coffee.">
+    <title>Local Specialty Coffee Guide - Locations Map</title>
+    <meta name="description" content="Find local specialty coffee shops on an interactive map.">
+    <!-- Leaflet CSS & JS for Interactive Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/medium.css" media="(min-width: 768px)">
     <script src="scripts/script.js" defer></script>
@@ -15,27 +18,20 @@
         <nav>
             <button id="menu-button" aria-label="Menu">&#9776;</button>
             <ul id="nav-list">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="coffee.html">Coffee Shops</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="map.html">Locations</a></li>
+                <li><a href="map.html" class="active">Locations</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <img src="images/hero-coffee.jpg" alt="Steaming cup of coffee" loading="lazy" width="800" height="500">
-            <div class="hero-text">
-                <h2>The Art of Good Coffee in Your City</h2>
-                <p>Find the ideal spots to enjoy a unique brew and relax.</p>
-            </div>
-        </section>
-
-        <section class="local-storage-section">
-            <h3>Your Visitor Log</h3>
-            <p id="visitor-message">Welcome, coffee lover!</p>
-        </section>
+        <h2>Locate Our Coffee Shops</h2>
+        <p>Click on any marker on the map to see details about the coffee shop.</p>
+        
+        <!-- Interactive Map Container -->
+        <div id="map"></div>
     </main>
 
     <footer>

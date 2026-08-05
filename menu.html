@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Specialty Coffee Guide - Home</title>
-    <meta name="description" content="Discover the best local specialty coffee shops and enjoy a unique cup of coffee.">
+    <title>Local Specialty Coffee Guide - Menu</title>
+    <meta name="description" content="Explore our specialty coffee drinks and bakery menu with prices in USD.">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/medium.css" media="(min-width: 768px)">
     <script src="scripts/script.js" defer></script>
@@ -15,27 +15,27 @@
         <nav>
             <button id="menu-button" aria-label="Menu">&#9776;</button>
             <ul id="nav-list">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="coffee.html">Coffee Shops</a></li>
-                <li><a href="menu.html">Menu</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
                 <li><a href="map.html">Locations</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <img src="images/hero-coffee.jpg" alt="Steaming cup of coffee" loading="lazy" width="800" height="500">
-            <div class="hero-text">
-                <h2>The Art of Good Coffee in Your City</h2>
-                <p>Find the ideal spots to enjoy a unique brew and relax.</p>
-            </div>
-        </section>
+        <h2>Specialty Drinks & Bakery Menu</h2>
+        <p>All prices are listed in USD ($).</p>
 
-        <section class="local-storage-section">
-            <h3>Your Visitor Log</h3>
-            <p id="visitor-message">Welcome, coffee lover!</p>
-        </section>
+        <!-- Category Filters -->
+        <div class="filter-buttons">
+            <button id="filter-all-menu">All Items</button>
+            <button id="filter-hot">Hot Coffee</button>
+            <button id="filter-cold">Cold Drinks</button>
+            <button id="filter-bakery">Bakery</button>
+        </div>
+
+        <div id="menu-container" class="cafes-grid"></div>
     </main>
 
     <footer>
